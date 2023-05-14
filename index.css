@@ -100,9 +100,36 @@ a.link-to-book:hover {
     text-transform: uppercase;
 }
 
-.carousel-inner {
-    height: 700px;
-}
+.slider {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .slide.active {
+    opacity: 1;
+  }
+  
+  .slide:first-child {
+    opacity: 1;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
 .row-flex {
     display: flex;
@@ -113,7 +140,7 @@ a.link-to-book:hover {
     display: flex;
     flex-direction: column;
     flex: 1;
-    margin: 30px 20px;
+    margin: 20px 10px;
 }
 
 .btn.btn-primary {
@@ -128,8 +155,8 @@ a.link-to-book:hover {
 }
 
 .btn.btn-primary:hover {
-     background-color: blue;
-     color: rgb(70, 15, 15);
+     background-color: rgb(34, 185, 223);
+     color: rgb(8, 8, 8);
   padding: 5px 10px;
   text-align: center;
   text-decoration: none;
@@ -138,20 +165,23 @@ a.link-to-book:hover {
   margin: 4px 2px;
   cursor: pointer;
 }
-
-
-
 .opening-time,
 .contact-adress {
     flex: 1;
-    margin: 30px 20px;
+    margin: 20px 10px;
     font-size: 1.2em;
 }
-
 .form-group p {
     font-size: 1.2em;
 }
-
+.form-control{
+    margin: 0%;
+    width: 250px;
+}
+  
+  button {
+    margin-right: 10px;
+  }
 .opening-time p span,
 .contact-adress p span {
     display: block;
@@ -167,11 +197,6 @@ a.link-to-book:hover {
     .about-section h3 {
         font-size: 20px;
     }
-
-    .carousel-inner {
-        height: auto;
-    }
-
     .row-flex {
         display: flex;
         flex-direction: column;
@@ -195,11 +220,6 @@ a.link-to-book:hover {
     .about-section h3 {
         font-size: 15px;
     }
-
-    .carousel-inner {
-        height: auto;
-    }
-
     .row-flex {
         display: flex;
         flex-direction: column;
@@ -213,7 +233,6 @@ a.link-to-book:hover {
     .form-group p {
         font-size: 15px;
     }
-
     .opening-time p span,
     .contact-adress p span {
         font-size: 15px;
